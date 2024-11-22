@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Food Webpage</title>
+    <meta charset="UTF-8">
+    <meta name="" content="">
+    <meta name="" content="">
+    <meta name="" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--flexible view for any device-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="scripts.js" defer></script>
+    <!--defer attribute makes the script load in the background and execute after the document has been completely parsed (so we can place the script in <head> instead of very bottom before </body>)-->
+</head>
+<body class="bodyI">
+
+    <header>
+        <!--logo-->
+        <table class="header">
+            <tr> <!--logo-->
+                <td rowspan="2" class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></td>
+                    
+                <td class="h-mid-col"> <!--motto-->
+                    <div class="motto">Welcome to <strong>RAW Foodies</strong>! Ready to start your jorney of exploring delicious food?</div>
+                </td>
+
+                <td class="search-bar"> <!--search bar--> <!--referenced from Copilot-->
+                    <div class="search-container"> 
+                        <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">  <!--onkeyup event to trigger the search function-->
+                        <ul id="resultList"></ul> 
+                    </div>
+                </td> 
+            </tr>                         
+
+            <!--menu bar-->
+            <tr class="menu">
+                <td colspan="2" class="h-mid-col">
+                    <nav> 
+                        <ul class="navbar">
+                            <li class="dropdown"> <!--referenced from w3school-->
+                                <div class="drop-container">
+                                    <a href="#" class="dropbtn" onclick="getRandomRecipe(event)">Recipes</a>
+                                    <div class="dropdown-content"> <!--dropdown contents-->
+                                        <a href="meatball_spaghetti.html">Spaghetti and Meatballs</a>
+                                        <a href="shrimp_salad.html">Shrimp Salad</a> 
+                                        <a href="poached_salmon.html">Poach Salmon</a>
+                                        <a href="blueberry_pancake.html">Blueberry Pancakes</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="feedback.html">Feedback</a></li>
+                            <!-- <li><a href="">Login/Register</a></li> -->
+                        </ul>
+                    </nav>
+                </td>
+                <td></td>
+            </tr>
+            
+        </table>
+
+
+
+        <!--breadcrumbs-->
+        <div class="breadcrumbs">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--sidebar, reference: w3school-->
+        <!-- <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
+            <!--javascript:void(0) is a trick to make sure that clicking the link doesn’t navigate anywhere-->
+            <!--javascript:void(0) expression is often used in web development to prevent an anchor tag (<a>) or a similar clickable element from performing its default action-->
+            <!-- <a><img></a> --> <!--user icon-->
+            <!-- <a href="#">Profile</a>
+            <a href="#">Account</a>
+            <a href="#">Activity</a>
+            <a href="#">History</a>
+            <a href="#"><br>Services</a> --> <!--href="#" creates a link that, when clicked, doesn't navigate to another page or section but instead scrolls to the top of the current page-->
+        <!--</div>
+        
+        <div id="main" class="sidebarbtn">
+            <button class="openbtn" onclick="openNav()">☰ User</button>  
+        </div> --> <!--sidebar interactive button -->
+    </header>
+
+    <article>
+        <div class="upper-page">
+            <!--big sticky feature img-->
+            <div class="sticky-container">
+                <a><img src="images/Unrelated/SuperHealthySmoothies.jpg" alt="healthy_smoothie" class="sticky-img"></a> <!--image from: https://www.pinterest.com/pin/333618284894893890/-->
+                
+                <!--content of the featured-->
+                <div class="sticky-content">
+                    <h2 class="stick-head">Daily Dose of Foodie's Belief</h2>
+                    <p class="sticky-text">Another good day to eat another good food. To lift your spirit, you have to eat. When you eat you have the energy to strive~</p>
+                </div>
+            </div>
+
+            
+                
+
+            <div class="right">               
+    
+                <h2 class="recomm-heading">Today's Recommendation</h2>
+                <!--recommendation slideshow-->
+                <div class="recomm">
+                    
+                    <div class="slides fade"> <!--assigning multiple class names by using spaces-->
+                        <a href="meatball_spaghetti.html">
+                            <img src="images/Spaghetti_and_Meatballs.jpg" alt="spaghetti">
+                        </a>
+                        <h4>Spaghetti with Juicy Meatballs</h4>
+                    </div>
+
+                    <div class="slides fade"> <!--use '.fade' class to create fade effect with keyframe animation-->
+                        <a href="shrimp_salad.html">
+                            <img src="images/salad.jpg" alt="shrimp_salad">
+                        </a>
+                        <h4>Fresh and Plump Shrimp Salad</h4>
+                    </div>
+
+                    <div class="slides fade">
+                        <a href="poached_salmon.html">
+                            <img src="images/salmon.jpg" alt="poached_salmon">
+                        </a>
+                        <h4>Juicy Poached Salmon</h4>
+                    </div>
+
+                    <div class="slides fade">
+                        <a href="blueberry_pancake.html">
+                            <img src="images/pancakes.jpg" alt="blueberry_pancake">
+                        </a>
+                        <h4>Fluffy Blueberry Pancakes</h4>
+                    </div>
+                    
+                </div> <!--recommendation container-->
+
+                <h2 class="img-holder-heading">Learn More about your Food!</h2>
+                <!--prev/next image holder panel-->
+                <div class="img-holder">
+                    
+                    <div class="img-box">
+                        <img src="images/pancakes4.jpg" alt="pancake">
+                        <div class="img-desc">
+                            <h4>Pancakes</h4>
+                            <p>Did you know? The little piece of butter is a cherry on top for a pancake. Especially a pancake fresh out of the pan. A melted butter on pancake does not only looks flattering, but also creates a rich and flavorful experience. Here is a <a href="blueberry_pancake.html">blueberry pancake recipe</a>, if you are getting more interested in pancakes now.</p>
+                        </div>
+                    </div>
+
+                    <div class="img-box">
+                        <img src="images/salad2.jpg" alt="shrimp_salad">
+                        <div class="img-desc">
+                            <h4>Seafood Lovers?</h4>
+                            <p>Check this out! This <a href="shrimp_salad.html">Shrimp Salad</a> will not disappoint you. With shrimp salad, salad are no longer bland or unappetising; Not only are salads healthy, shrimps are high in vitamins and minerals, too. You wouldn't want to miss out a win-win dish out here, do you?</p>
+                        </div>
+                    </div>
+
+                    <div class="img-box">
+                        <img src="images/salmon3.jpg" alt="alfredo-sauce">
+                        <div class="img-desc">
+                            <h4>Something Classy</h4>
+                            <p>Treating yourself every once in a while with something classy like <a href="poached_salmon.html">Poached Salmon</a> wouldn't hurt! Special attention to all the foodies out there. We know it is very expensive to eat all the delicacies around the world, but you are worth it!</p>
+                        </div>
+                    </div>
+
+                    <!--referenced from copilot-->
+                    <button class="prev" onclick="prevImg()">Previous</button>
+                    <button class="next" onclick="nextImg()">Next</button>
+                </div> <!--image holder-->
+                
+            </div> <!--right side of the upper page-->
+
+        </div>
+
+        <div class="mid-page">
+            <!--content-->
+            <div class="content-container">
+                <div class="panel">
+                    <h2>DISCOVER MORE: </h2>
+                    <div class="panel-content">
+                        <img src="images/salad.jpg" alt="shrimp_salad" class="content-img">
+                        <div class="content">
+                            <h3 class="content-title"><a href="shrimp_salad.html">Shrimp Salad</a></h3>
+                            <p class="content-text"><strong>Fail proof, simple and flavorful</strong> Shrimp Salad that can be made as long as you have limbs. You would <strong>only need five ingredients</strong> for this salad. With just <strong>shrimp, bell pepper, mayonnaise, lemon juice, and dill</strong> you are able to create magic. Thence, time to say goodbye to normal salad and be addicted to new healthy and appetising Shrimp Salad!</p>
+                        </div>
+                    </div>
+                    
+                    <!--read more button-->
+                    <div class="read-more">
+                        <p><a href="shrimp_salad.html">READ MORE..</a></p>
+                    </div>
+
+                    <div class="panel-content">
+                        <img src="images/pancakes.jpg" alt="blueberry_pancake" class="content-img">
+                        <div class="content">
+                            <h3 class="content-title"><a href="blueberry_pancake.html">Blueberry Pancake</a></h3>
+                            <p class="content-text">Craving for something <strong>fluffy</strong>? This step-by-step blueberry pancake recipe is just right for you! Follow along with the recipe, you might just found yourself the <strong>perfect blueberry pancake.</strong></p>
+                        </div>
+                    </div>
+
+                    <!--read more button-->
+                    <div class="read-more">
+                        <p><a href="blueberry_pancake.html">READ MORE..</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!--category panel-->
+            <div class="cat-container">
+                <h2>Get Food Recipe Recommendations under Specific Categories</h2>
+
+                <div class="category">
+                    <div class="cat-frame">
+                        <a href="#" onclick="getRandomRecipeByCategory(event, 'western')">
+                            <img src="images/salmon.jpg" alt="western" width="20%" class="cat-img">           
+                        </a>
+                    </div>
+                    <p class="cat-title"><a href="#" onclick="getRandomRecipeByCategory(event, 'western')">Western</a></p>
+                </div>
+
+                <div class="category">
+                    <div class="cat-frame">
+                        <a href="#" onclick="getRandomRecipeByCategory(event, 'noodle')">
+                            <img src="images/Spaghetti_and_Meatballs.jpg" alt="noodle" width="20%" class="cat-img">
+                        </a>
+                    </div>
+                    <p class="cat-title"><a href="#" onclick="getRandomRecipeByCategory(event, 'noodle')">Noodle</a></p>
+                </div>
+
+                <div class="category">
+                    <div class="cat-frame">
+                        <a href="#" onclick="getRandomRecipeByCategory(event, 'dessert')">
+                            <img src="images/Unrelated/pastry3.jpg" alt="pastry" width="20%" class="cat-img">
+                        </a>
+                    </div>
+                    <p class="cat-title"><a href="#" onclick="getRandomRecipeByCategory(event, 'dessert')">Dessert</a></p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--
+        <div class="extra-content">
+            <h2 class="extra-heading">NOTICE</h2>
+            <div class="about">
+                <img src="images/Unrelated/social.jpg" alt="social-image" class="about-img">
+                <div class="about-content">
+                    <h2>Our plan</h2>
+                    <p>We will add a few other function like user login and register or more in the future. This website is freshly published, we still had a lot to work on. For now let's comment this. I had nothing else to say to fill up this particular space here. Thank you.. for reading? </p>
+                </div>
+            </div>
+        </div>
+        -->
+
+        <!-- like and share button -->
+        <div class="sticky-button">
+            <a href="" class="button" id="likeBtn">
+                <img src="images/Unrelated/like.jpg" alt="share">                    
+            </a>
+            <p><span id="likeCount">0</span></p>
+            <a href="" class="button" id="shareBtn">
+                <img src="images/Unrelated/share.jpg" alt="share">
+            </a> 
+        </div>
+    </article>
+
+    <footer>
+        <table class="footer-div">
+            <tr>
+                <td class="connect"> <!--footer 1/3-->
+                    <a href="index.html"><img src="images/logo.png" alt="logo"></a> <!--logo-->
+                    
+                    <!--social media icons-->
+                    <div class="social-media-icons">
+                        <span class="dot">
+                            <a href="" target="_blank">
+                                <img src="images/Unrelated/instagram.jpg" alt="Instagram"></a></span>
+                        <span class="dot">
+                            <a href="" target="_blank">
+                                <img src="images/Unrelated/pinterest.jpg" alt="Pinterest"></a></span>
+                        <span class="dot">
+                            <a href="" target="_blank">
+                                <img src="images/Unrelated/facebook.jpg" alt="Facebook"></a></span>
+                        <span class="dot">
+                            <a href="" target="_blank">
+                                <img src="images/Unrelated/x.jpg" alt="X"></a></span>
+                    </div> 
+
+                    <p><strong>connect with us!</strong></p>
+                </td> <!--footer 1/3-->
+
+                <td> <!--footer 2/3-->
+                    <div class="sub-nav"><!--sub nav menu-->
+                        <div class="sub-menu">
+                            <p><span class="small-caps">Navigation</span></p> <!--nav links-->
+                            <p>For you: </p>
+                            <ul>
+                                <li><a href="#" onclick="getRandomRecipe(event)">Recipes</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <!-- <li><a href="">Login / Register</a></li> -->
+                                <li><a href="feedback.html">Feedback</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="most-like"> <!--most liked page-->
+                            <p><span class="small-caps">Visitor's Favourite</span></p>
+                            <p>You might be interested: </p>
+                            <ul>
+                                <li><a href="meatball_spaghetti.html">Spaghetti and Meatballs</a></li>
+                                <li><a href="shrimp_salad.html">Shrimp Salad</a></li>
+                                <li><a href="poached_salmon.html">Poach Salmon</a></li>
+                                <li><a href="blueberry_pancake.html">Blueberry Pancakes</a></li>
+                            </ul>
+                        </div>
+                    </div> <!--sub-nav-->
+                </td> <!--footer 2/3-->
+
+                <!-- OMITTED
+                <td class="feedback"> footer 3/3-
+                    <div>feedback
+                        <form action="mailto:abc@example.com" method="POST">
+                            <fieldset>
+                                <legend>Please share your experience.</legend>
+                                <input type="radio" id="dissatisfied" name="exp" value="dissatisfied" required="required">
+                                <label for="dissatisfied">Dissatisfied</label>
+                                <br>
+                                <input type="radio" id="neutral" name="exp" value="neutral" required>
+                                <label for="neutral">Neutral</label>
+                                <br>
+                                <input type="radio" id="satisfied" name="exp" value="satisfied" required>
+                                <label for="satisfied">Satisfied</label>
+                                <br>
+                                <input type="radio" id="more" name="exp" value="feedback.html" onclick="redirectToLink(this.value)"> insert the url for feedback form
+                                <label for="more">More..</label> when user clicks on the 'More..' radio buttons, the onclick event triggers the redirectToLink function, which then uses window.location.href to navigate to the specified URL.
+                            </fieldset> link redirecting method is learnt from Copilot
+                            submit button
+                            <input type="submit" value="Submit" class="submitbtn" required onclick="alert('Thank you for sharing your experience with us.')">
+                        </form>
+                    </div>
+                </td> footer 3/3 -->
+            </tr>
+        </table> <!--footer div-->
+        <address>&copy;<a href="about.html">Group 9</a> | <span class="update">Last updated: 20/11/2024 </span></address>
+    </footer>
+    <p><em>Disclaimer: This website is created for education and non-commercial use only. It is an assignment for completion of unit, DBI211 Fundamentals of Web Technology based on the Foundation (IT/Multimedia) course from Swinburne University of Technology Sarawak Campus.</em></p>
+</body>
+</html>

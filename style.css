@@ -1,0 +1,1023 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #E5DDC9;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    line-height: 1.6;
+}
+
+/*search bar*/ /*stripped from Copilot*/
+.search-container {
+    max-width: 400px;
+    margin: auto;
+}
+
+#searchInput {
+    width: 93%;
+    padding: 10px;
+    font-size: 16px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#resultList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-color: white;
+    width: 265px;
+}
+
+#resultList li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 2px auto;
+}
+
+
+/* DO NOT UN-COMMENT THIS. IT WILL CAUSE THE WEBPAGE TO BEHAVE WEIRDLY. pull down to refresh (not sure how it looks like. cannot try) Information taken from Copilot
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow: hidden;
+}
+
+.refresh {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+}
+
+.refresh-indicator {
+    text-align: center;
+    padding: 20px;
+    background: #f1f1f1;
+    display: none;
+}
+
+.content {
+    padding: 20px;
+}
+*/
+
+/*header*/
+.header {
+    /* border: 1px solid black; */
+    width: 100%;
+    background-color: #CDC3AD;
+}
+.logo {
+    width: 300px;
+}
+.logo img {
+    width: 200px;
+}
+.motto {
+    text-align: center;
+    padding: 3px 0;
+    color: #1F2F21;
+    font-size: 20px;
+    font-style: italic;
+}
+.search-bar {
+    width: 20%;
+}
+.h-mid-col {
+    width: 65%;
+}
+
+/*nav menu*/
+.menu {
+    padding: 10px;
+    background-color: #939e7a;
+}
+.menu ul li {
+    margin: 0 5%;
+    list-style-type: none;
+    display: inline;
+}
+.menu ul li a:hover {
+    color: rgba(255, 255, 255, 0.753);
+    transition: 0.2s;
+}
+.menu a {
+    text-decoration: none;
+    color: #1b3e2d;
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    float: right;
+}
+.navbar li{
+    width: 200px;
+}
+.navbar li a{
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*drop down menu*/
+.dropdown {
+    position: relative;
+    display: block;
+}
+.dropdown-content { 
+    display: none; 
+    position: absolute; /*Positioned relative to the dropdown container*/
+    background-color: #7f8f72; 
+    min-width: 210px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1; /*ensure it's on top of other elements*/
+}
+.dropdown-content a {
+    color: #1b3e2d;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover { 
+    color: rgb(163, 155, 199); 
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*breadcrumbs*/
+.breadcrumbs {
+    /* background-color: rgb(240, 156, 126); */
+    margin: -0.5% 0;
+    margin-left: -2.5%;
+    margin-top: 20px;
+    height: 60px;
+}
+.breadcrumbs nav ul li {
+    list-style-type: none;
+    display: inline;
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 3%;
+}
+.breadcrumbs nav ul li a {
+    text-decoration: none;
+}
+/*reference: https://blog.hubspot.com/marketing/navigation-breadcrumbs#:~:text=Breadcrumb%20Navigation%20in%20HTML%20and%20CSS&text=The%20easiest%20way%20to%20do,HTML */
+.breadcrumbs li+li:before { /* li+li meaning selector li immediately after li (sibling selector)(basically means all li) */
+    content: ">"; /* :before is a pseudo-element (keyword added to a selector that lets you style a specific part of the selected element) that inserts content before the selected element's content */
+    padding: 10px; /* content property here inserts whatever content slotted in before the selected element (content property is used with the ::before and ::after pseudo-elements, to insert generated content) */
+}
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+.breadcrumbs a:visited {
+    color: purple;
+}
+
+/*upper page arrangement*/
+.upper-page {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*sticky image*/
+.sticky-container {
+    display: flex;
+    height: 1400px; /*beyond this height = no longer sticky, because this is the div that contains the img */
+    background-color: white;
+    align-items: center;
+    width: 70%;
+}
+.sticky-img {
+    position: sticky;
+    text-align: left;
+    width: 1050px;
+    height: 1400px;
+    top: 0;/*  the value before img becomes sticky */
+}
+.sticky-content {
+    position: absolute;
+    padding: 30px;
+    background-color: #ecdcc8;
+    z-index: 1;
+    width: 40%;
+    height: 13%;
+    margin-left: 10%;
+    opacity: 0.8;
+    border-radius: 15px;
+}
+
+/*right side of upper page*/
+.right {
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(198, 231, 191);
+    width: 30%;
+    align-items: center;
+}
+
+
+/*recommendation of the day*/ /*referenced from Copilot*/
+.recomm-heading {
+    text-align: center;
+}
+.recomm {
+    position: relative;
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.slides {
+    display: none;
+}
+.slides img {
+    width: 350px;
+    height: 400px;
+    object-fit: cover; /*cover entire container*/
+    object-position: center; /*center img within container*/
+    display: block; 
+}
+/* Apply the fade animation to elements with the .fade class */
+.fade {
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+/* Define keyframes for the fade effect */
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.slides h4 {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*prev/next image holder*/ /*referenced from Copilot*/
+.img-holder-heading {
+    margin-top: 15%;
+    text-align: center;
+}
+.img-holder {
+    display: flex; /* enables the flexbox layout mode, allowing you to manipulate elements' alignment, spacing, and order within a container */
+    /*align in row*/
+    overflow: visible;
+    position: relative;
+    margin: 20px auto;
+    background-color: #444;
+    border: 1px solid black;
+}
+.img-box {
+    display: none;
+    background-color: peru;
+}
+.img-box.active { /*shows currently active item*/
+    display: block;
+}
+.img-box img {
+    width: 350px;
+    height: 400px;
+    object-fit: cover; /*cover entire container*/
+    object-position: center; /*center img within container*/
+    display: block; 
+}
+.img-desc {
+    margin-top: 10px;
+    position: absolute;
+    background-color: paleturquoise;
+    right: 30px;
+    left: 30px;
+    text-align: center;
+    max-height: 90px;
+    overflow: auto;
+    border: 1px solid black;
+}
+.img-desc h4 {
+    margin-top: -.1px;
+    padding-top: 8px;
+}
+.img-desc p {
+    margin-top: -10px;
+}
+.img-holder button:hover {
+    opacity: .7;
+    transition-delay: .15s;
+}
+.prev, .next {
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    cursor: pointer;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+
+/*sidebar*/ /*reference: w3school*/
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    margin-right: -15px;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+.sidebarbtn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+/*mid page alignment*/
+.mid-page {
+    margin-top: 3%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+/*content*/
+.content-container {
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 0;
+    padding-top: 3%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 5%;
+    background-color: #CDC3AD;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(211, 201, 179, 0.8);
+}
+.panel {
+    text-align: center;
+    width: 60%;
+}
+.panel h2{
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin-left: -20%;
+}
+.panel-content {
+    display: flex;
+    min-width: 700px;
+    height: auto;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    overflow: hidden;
+    margin: 2% 0;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.content-img {
+    width: 45%;
+    padding: 12px;
+    border-radius: 50px;
+}
+.content {
+    text-align: left;
+}
+.read-more {
+    font-size: large;
+    background-color: whitesmoke;
+    border: 1px solid wheat;
+    width: 70%;
+    margin: 0 40%;
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+.read-more a {
+    text-decoration: none;
+}
+
+/*category*/
+.cat-container {
+    margin-right: 10%;
+}
+.cat-container h2 {
+    text-align: center;
+}
+.category {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    text-align: center;
+    height: auto;
+}
+.cat-frame {
+    width: 250px;
+    height: 260px;
+}
+.cat-img {
+    width: 100%;
+    height: 90%;
+    border-radius: 100%;
+    object-fit: cover; /*crop image to fit the dimension*/
+    object-position: center; /* Center the image within the container, but seems like it's useless here */
+    border: 2px solid black;
+}
+.cat-title {
+    font-size: 1.2em;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+/*extra content*/
+.extra-content {
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    background-color: orange;
+}
+.extra-heading {
+    text-align: center;
+}
+.about {
+    background-color: whitesmoke;
+    display: inline-block;
+    border: 1px solid black;
+    min-height: 350px;
+}
+.about-img {
+    width: 40%;
+    float: left;
+    padding-right: 40px;
+}
+.about-content {
+    padding: 40px;
+}
+
+/*like and share button*/
+.sticky-button {
+    position: sticky; 
+    bottom: 10%;
+    background-color: antiquewhite;
+    width: 50px;
+    height: 120px;
+}
+.button img {
+    border-radius: 100%;
+    border: 1px solid black;
+    display: block;
+    margin: 30% 0;
+    width: 50px;
+    height: auto;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0.5;
+}
+.sticky-button p {
+    margin-top: -10px;
+    margin-left: 21px;
+    margin-bottom: -4px;
+}
+.button:hover img, button:focus img {
+    opacity: 1;
+}
+
+/* footer */
+.footer-div {
+    width: 100%;
+    background-color: #CDC3AD;
+}
+
+.connect {
+    margin: auto;
+    text-align: center;
+    width: 250px;
+}
+.connect p {
+    margin-top: -1px;
+}
+
+/*footer logo*/
+.connect img {
+    width: 150px;
+}
+
+/*social media button*/
+.dot img{
+    margin-right: 2px;
+    width: 30px;
+    border-radius: 100%;
+}
+
+/*sub nav*/
+.sub-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    height: 100%;
+}
+.sub-menu{
+    width: 20%;
+    align-items: left;
+}
+.sub-nav ul li {
+    list-style-type: none;
+    padding-bottom: 5px;
+}
+.sub-nav ul {
+    margin-block-start: 5px;
+    padding-inline-start: 15px;
+}
+.sub-nav a {
+    text-decoration: none;
+    font-size: 20px;
+}
+.sub-nav p {
+    margin: -.2px 0;
+    font-size: 20px;
+}
+.small-caps {
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/*feedback*/
+.feedback {
+    background-color: palevioletred;
+    margin: 20px;
+    padding: 20px;
+}
+form {
+    margin: 15px 0;
+}
+input[type="radio"] { 
+    margin-right: 10px; 
+}
+.submitbtn {
+    margin-top: 6px;
+}
+
+/*footer info*/
+.update {
+    font-style: normal;
+}
+
+
+/* splashpage css */
+.s_figure{
+    text-align: center;
+    max-width: 100%;
+    width: 1200px;
+}
+.s_img{
+    border-radius: 20%;
+    width:min-content;
+    max-width: 40%;
+    height: auto;
+}
+video {
+    position: fixed;
+    bottom: 0px; /* Position it near the bottom of the viewport */
+    right: 20px; /* Position it near the right of the viewport */
+    width: 350px; /* Set a fixed width for the video */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+    border-radius: 5px;
+    padding: 5px;
+}
+.container {
+    max-width: 1020px;
+    padding: 20px;
+}
+.recipe-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.recipe-card h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #cc3333;
+    text-align: center;
+}
+
+.recipe-card h2,
+.recipe-card h3,
+.recipe-card h4 {
+    color: #333;
+    margin: 15px 0 5px;
+}
+
+.recipe-card p {
+    margin-bottom: 15px;
+}
+
+/* Image Styling */
+.recipe img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.recipe-info h2{
+    color:#b79642;
+}
+
+.recipe-info h3{
+    color:#a2770a;
+}
+
+/* Ingredients List */
+.ingredients {
+    padding-left: 15px;
+}
+
+.ingredients li {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.title {
+    color: #e74c3c;
+}
+
+.number {
+    background-color: #b79642;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.container2{
+    max-width: 450px;
+    margin-bottom: 4000px;
+    padding: 20px;
+    float: right; 
+    padding: 20px;
+    position: absolute; 
+    top: 285px;            /* Aligns to the top */
+    right: 0;          /* Aligns to the right */
+    padding: 20px;
+}
+
+.author{
+    padding: 20px;
+    background-color: #f0f0f0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;   
+    position: relative;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.author-tips{
+    float: right;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 410px;
+    border-radius: 8px;
+    padding: 20px;
+    position: absolute; 
+    top: 510px;            /* Aligns to the top */
+    right: 19px;          /* Aligns to the right */
+    padding: 20px;
+    overflow: auto;
+}
+
+.container3 h3{
+    color:#be9b44;
+    font-size:1.5em;
+}
+.nutrition{
+    max-width: 410px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    position: absolute; /* Allows precise placement */
+    top: 1010.76px;            /* Aligns to the top */
+    right: 20px;          /* Aligns to the right */
+    padding: 20px;
+}
+
+.container4 h3{
+    color:#be9b44;
+}
+
+.container5{
+    width:450px;
+    padding: 20px;
+    position: absolute; /* Allows precise placement */
+    top: 1200.31px;            /* Aligns to the top */
+    right: 0;          /* Aligns to the right */
+    padding: 20px;
+}
+
+.rating {
+    display: flex;
+    color: #ff6b6b;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px; /* Allows precise placement */
+    top: 1450.31px;            /* Aligns to the top */
+    right: 0;          /* Aligns to the right */
+}
+
+.rating-stars {
+    color: #ffa500;/* Allows precise placement */
+    top: 0;            /* Aligns to the top */
+    right: 0;          /* Aligns to the right */
+}
+
+.recipe-right {
+    display: flex;
+    flex-direction: column;
+}
+.pre{
+    padding-left: 25%;
+    
+}
+
+.previousP{
+    text-align: center;
+    font-size: 18px;
+    width: 180px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.previousP a, .nextP a{
+    text-decoration: none;
+}
+
+/* about css */
+.a_article{
+    align-items: center;
+    margin-left: 25%;
+}
+.profile{
+    background-color: #ffffff;
+    position: relative;
+    margin-bottom: 50px;
+    transition-duration: 500ms;
+    z-index: 1;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(47, 91, 234, 0.125);
+    width: 60%;
+}
+.profile .Pic{
+    position: relative;
+    z-index: 1;
+    border-radius: 15px 15px 0 0;
+    margin: 0 auto;
+    padding: 30px 30px 0 30px;
+    background-color: #3f43fd;
+    overflow: hidden;
+}
+.profile img{
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+}
+.profile .Pic::after{
+    transition-duration: 500ms;
+    position: absolute;
+    width: 150%;
+    height: 100px;
+    bottom: -100px;
+    left: -25%;
+    content: "";
+    background-color: #ffffff;
+    transform: rotate(-15deg);
+}
+.profile .socialMedia{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    bottom: 0;
+    right: 30px;
+    text-align: right;
+}
+.profile .socialMedia a{
+    font-size: 14px;
+    color: #020710;
+    padding: 0 5px;
+}
+.profile .socialMedia a:hover, .profile .socialMedia a:focus{
+    color: rgb(137, 226, 232);
+}
+.profile .d{
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    text-align: right;
+    transition-duration: 500ms;
+    border-radius: 0 0 15px 15px;
+    border-color: #ffffff;
+}
+.profile .d::after{
+    position: absolute;
+    transition-duration: 500ms;
+    z-index: 1;
+    width: 50px;
+    height: 3px;
+    background-color: #3f43fd;
+    content: "";
+    top: 12px;
+    right: 30px;
+}
+.profile h4{
+    margin-bottom: 0.25rem;
+    transition-duration: 500ms;
+    font-size: 16px;
+}
+.profile p{
+    transition-duration: 500ms;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.profile:hover .Pic::after, .profile:focus .Pic::after{
+    background-color: #070a57;
+}
+.profile:hover .d, .profile:focus .d{
+    background-color: #070a57;
+}
+.profile:hover .socialMedia a, .profile:focus .socialMedia a{
+    color: white;
+}
+.profile:hover .d::after, .profile:focus .d::after{
+    background-color: white;
+}
+.profile:hover .d h4, .profile:focus .d h4{
+    color: white;
+}
+.profile:hover .d p, .profile:focus .d p{
+    color: white;
+}
+.return_button{
+    text-align: center;
+    font-size: 18px;
+    width: 180px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+
+
+
+/* feedback css */
+.f_body{
+    margin: 0;
+    align-items: center;
+    justify-content: space-around;
+    font-family: sans-serif;
+    height: 1200px;
+}
+.formbox{
+    background-color: #fff;
+    max-width: 45%;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(211, 201, 179, 0.8);
+    margin-bottom: 50px;
+}
+form{
+    max-width: 100%;
+    margin: 0 auto;
+}
+fieldset{
+    border: 0;
+}
+fieldset legend{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.r{
+    display: flex;
+}
+.c{
+    display: flex;
+}
+input[type="radio"]{
+    margin-left: 60px;
+}
+input .c label {
+    margin-left: 60px;
+}
+input, textarea{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.buttons{
+    text-align: right;
+}
+input[type="submit"],input[type="reset"]{
+    width: 100px;
+}
+.return_button{
+    text-align: center;
+    font-size: 18px;
+    width: 180px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+}

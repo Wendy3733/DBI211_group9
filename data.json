@@ -1,0 +1,9 @@
+[
+    { "id": 1, "name": "Apple", "description": "A sweet red fruit" },
+    { "id": 2, "name": "Banana", "description": "A long yellow fruit" },
+    { "id": 3, "name": "Cherry", "description": "A small red fruit" },
+    { "id": 4, "name": "Date", "description": "A sweet brown fruit" },
+    { "id": 5, "name": "Elderberry", "description": "A small black fruit" },
+    { "id": 6, "name": "Fig", "description": "A sweet and soft fruit" },
+    { "id": 7, "name": "Grape", "description": "A small juicy fruit" }
+]

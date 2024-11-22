@@ -1,0 +1,293 @@
+<!--SPAGHETTI-->
+<!DOCTYPE html>
+<!-- Start of HTML -->
+<html lang="eng">
+    <!--Description : -->
+    <!--Author : AnnaWEE-->
+    <!--DATE :1 Nov 2024-->
+    <!--Validated : OK 1 Nov-->
+<head>
+    <title>Spaghetti and Meatballs</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Anna">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<!-- Start of Body -->
+ <body>
+    <header>
+        <!--logo-->
+        <table class="header">
+            <tr> <!--logo-->
+                <td rowspan="2" class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></td>
+                    
+                <td class="h-mid-col"> <!--motto-->
+                    <div class="motto">Welcome to <strong>RAW Foodies</strong>! Ready to start your jorney of exploring delicious food?</div>
+                </td>
+
+                <td class="search-bar"> <!--search bar--> <!--referenced from Copilot-->
+                    <div class="search-container"> 
+                        <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">  <!--onkeyup event to trigger the search function-->
+                        <ul id="resultList"></ul> 
+                    </div>
+                </td> 
+            </tr>                         
+
+            <!--menu bar-->
+            <tr class="menu">
+                <td colspan="2" class="h-mid-col">
+                    <nav> 
+                        <ul class="navbar">
+                            <li class="dropdown"> <!--referenced from w3school-->
+                                <div class="drop-container">
+                                    <a href="#" class="dropbtn" onclick="getRandomRecipe(event)">Recipes</a>
+                                    <div class="dropdown-content"> <!--dropdown contents-->
+                                        <a href="meatball_spaghetti.html">Spaghetti and Meatballs</a>
+                                        <a href="shrimp_salad.html">Shrimp Salad</a> 
+                                        <a href="poached_salmon.html">Poach Salmon</a>
+                                        <a href="blueberry_pancake.html">Blueberry Pancakes</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="feedback.html">Feedback</a></li>
+                            <!-- <li><a href="">Login/Register</a></li> -->
+                        </ul>
+                    </nav>
+                </td>
+                <td></td>
+            </tr>
+            
+        </table>
+
+
+
+        <!--breadcrumbs-->
+        <div class="breadcrumbs">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="meatball_spaghetti.html">Spaghetti and Meatballs</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <article>
+        <div class="container">
+
+        <!-- Recipe 1 -->
+        <div class="recipe-card">
+    
+
+            <figure  class="s_figure">
+                <img class="s_img" src="images/Spaghetti_and_Meatballs.jpg" alt="Spaghetti and Meatballs">
+            </figure>
+                <div class="recipe-info">
+                    <h1>SPAGHETTI AND MEATBALLS</h1>
+                    <p>You will love this spaghetti and meatballs recipe served in our quick, easy homemade marinara sauce. Trust me, these homemade meatballs are incredible!</p>
+                    <h2>Key Ingredients:</h2>
+                <ul class="ingredients">
+                        <li>Ground beef and ground pork: Use ground beef that's at least 15% fat (85/15). The beef keeps our meatballs juicy, while the pork adds flavor and tenderness.</li>
+                        <li>Saltine crackers and milk: The secret to the best meatballs is panade made from saltine crackers and milk. We do the same when making our best meatloaf and these juicy Italian meatballs. It's a game-changer.</li>
+                        <li>Onion and garlic: Add moisture and flavor to the meatball mixture.</li>
+                        <li>Fennel seeds and parsley: Make these taste authentic and Italian. Don't skimp on the fennel. It makes such a difference in flavor.</li>
+                        <li>Parmesan: I use Parmigiano-Reggiano cheese in these meatballs, and I love it!</li>
+                        <li>Homemade sauce: Our sauce is so simple that you can make it in the time the meatballs take to bake — about 15 minutes. It's light and flavorful, thanks to shallot, garlic, Italian seasoning, white wine, canned tomatoes, and fresh basil.</li>
+                </ul>
+
+                <img class="s_img" src="images/spaghetti2.jpg" alt="Spaghetti and Meatballs">
+ 
+                    <h3>You Will Need</h3>
+                        <li>12 to 16 ounces dried spaghetti or your favorite pasta</li>
+                        <li>8 ounces (225g) ground beef, use 85/15 or 80/20</li>
+                        <li>8 ounces (225g) ground pork</li>
+                        <li>4 tablespoons (25g) saltine cracker crumbs from 8 crackers</li>
+                        <li>1/2 cup + 1 tablespoon (135g) whole milk</li>
+                        <li>1 ½ tablespoons olive oil</li>
+                        <li>1/2 cup (60g) minced onion</li>
+                        <li>4 cloves garlic, minced</li>
+                        <li>1 tablespoon ground fennel</li>
+                        <li>1/4 cup (10g) chopped parsley</li>
+                        <li>6 tablespoons (1.5oz) finely grated Parmigiano-Reggiano cheese</li>
+                        <li>3/4 teaspoon fine sea salt</li>
+                        <li>1/4 teaspoon fresh ground black pepper</li>
+                    <h3>HOMEMADE SPAGHETTI SAUCE</h3>
+                        <li>1/2 cup (60g) minced shallot</li>
+                        <li>6 cloves garlic, minced</li>
+                        <li>1/4 teaspoon Aleppo pepper or crushed red pepper flakes</li>
+                        <li>2 tablespoons olive oil</li>
+                        <li>1 tablespoon Italian seasoning</li>
+                        <li>1/4 cup (60ml) dry white wine</li>
+                        <li>1/3 cup (80ml) chicken stock</li>
+                        <li>1 (28oz) can of crushed tomatoes, we like canned crushed tomatoes with basil</li>
+                        <li>1/2 cup (15g) chopped fresh basil</li>
+                        <li>1 teaspoon fine sea salt</li>
+                        <li>1/4 teaspoon fresh ground black pepper</li>
+
+                    <h3>How to Make Spaghetti and Meatballs</h3>
+                        <p>To make the meatball mixture, you will combine crushed saltines and milk, and set aside. Then move on to cooking the onion, garlic, and fennel seeds in olive oil until soft and fragrant.</p>
+                        <p>Combine the cooked onion mixture with the ground beef, ground pork, parsley, cheese, salt, and pepper. I love using my hands to mix meatball ingredients - it's the best way to combine everything without overworking the meat. I do the same when making meatloaf.</p>
+                        <p>Then, you'll add the saltine and milk mixture. It seems too wet at first, but the milk absorbs beautifully into the meatball mixture, making the meatballs tender. Watch our video to see what my mixture looked like.</p>
+
+                <img class="s_img" src="images/Forming-Meatballs.jpg" alt="Spaghetti and Meatballs">
+
+                        <p>I usually get around 16 meatballs from this meatball recipe, perfect for four servings. You can adjust the size to your liking.</p>
+                        <p>I bake the meatballs until lightly browned, then finish them in the sauce for extra tenderness. See our recipe for Italian Meatballs for large meatballs (one meatball per person, large).</p>
+                        <p>While the meatballs bake, I whip up a quick marinara with shallots, garlic, white wine, chicken stock, crushed tomatoes, Italian seasoning, and fresh basil. It takes about 15 minutes! This is also a good time to cook your spaghetti (or favorite pasta.)</p>
+                    
+                <img class="s_img" src="images/spaghetti3.jpg" alt="Spaghetti and Meatballs">
+
+                        <p>When baked, add the meatballs to your sauce to simmer for a few more minutes. When your spaghetti is cooked, toss it directly into the sauce! It absorbs so much more flavor than just spooning the sauce on top. We use the same trick when making this spaghetti recipe with meat sauce.</p>
+
+                <img class="s_img" src="images/spaghetti4.jpg" alt="Spaghetti and Meatballs">
+
+                        <h2 class="title">Directions</h2>
+
+                        <h3>MEATBALLS</h3>
+                        <p><span class="number">1</span> Combine saltine cracker crumbs and milk in a small bowl. Let sit.</p>
+                        <p><span class="number">2</span> Heat 1 ½ tablespoons of olive oil in a large, oven-safe skillet over medium heat. Add onions, garlic, and fennel. Cook until softened, but before they brown, 2 to 3 minutes. Remove from heat.</p>
+                        <p><span class="number">3</span> In a large bowl, combine ground beef, pork, parsley, cheese, salt, pepper, and the cooked onion mixture. Add the soaked saltine mixture and mix well (hands work best!).</p>
+                        <p><span class="number">4</span> Preheat oven to <b>425°F</b> (218°C). Lightly oil a parchment-lined baking sheet. Shape the meatball mixture into four large meatballs. Place on the baking sheet and bake until browned on top, 10 to 12 minutes.</p>
+
+                        <h3>SPAGHETTI SAUCE</h3>
+                        <p><span class="number">1</span> Heat 2 tablespoons of olive oil over medium heat in the same skillet used earlier. Add shallots, garlic, and Aleppo pepper. Cook until softened, 2 to 3 minutes.</p>
+                        <p><span class="number">2</span> Add wine and simmer until almost dry. Sprinkle Italian seasoning over the shallots and cook, stirring, for 1 minute.</p>
+                        <p><span class="number">3</span> Stir in stock, crushed tomatoes, salt, pepper, and fresh basil. Bring to a low simmer.</p>
+
+                        <h3>COOK SPAGHETTI</h3>
+                        <p><span class="number">1</span> Bring a large pot of salted water to a boil, and then cook spaghetti according to package directions (usually 10 to 12 minutes), but check for doneness a minute or two before the suggested cooking time.</p>
+
+                        <h3>TO FINISH</h3>
+                        <p><span class="number">1</span> Gently nestle the partially baked meatballs into the sauce and pour in any juices left on the baking sheet. Spoon some sauce over each meatball.</p>
+                        <p><span class="number">2</span> Cover the skillet and simmer over low heat until meatballs reach 160°F internally (5 to 10 minutes).</p>
+                        <p><span class="number">3</span> Toss in the cooked spaghetti, then leave for a minute so the pasta absorbs some of the sauce. If the sauce needs thinning out, add 1/4 cup to 1/2 cup of the pasta cooking water. Toss again, and then serve with parmesan cheese sprinkled on top.</p>
+    </div>
+        </div> 
+             </div>
+
+
+    <div class="container2">
+        <div class="author">
+            <figure class="s_figure">
+                <img class="s_img" src="images/author1.jpg" alt="author">
+                <h3>AUTHOR: Joanne Gallagher</h3>
+            </figure>
+    </div>
+        </div>
+
+            <div class="container3">
+                <div class="author-tips">
+                    <h3>Adam and Joanne's Tips</h3>
+                    <p><strong>Storing:</strong> Cooked meatballs in an airtight container will last up to 3 days in the refrigerator. Both the meatballs and marinara sauce freeze well. Freeze separately or together for up to 3 months. Thaw frozen meatballs and sauce overnight in the fridge. Heat the sauce and meatballs gently on the stovetop or oven until warm.</p>
+                    <p><strong>Ground meat:</strong> A mixture of ground beef (85/15 for juiciness) and ground pork is perfect for a classic flavor. But feel free to mix it with ground veal, lamb, or Italian sausage.</p>
+                    <p><strong>Store-bought sauce:</strong> Our homemade tomato sauce is simple to make. If you're short on time, choose a high-quality store-bought marinara. One 24-ounce jar of sauce should do it.</p>
+                    <p>The nutrition facts provided below are estimates.</p>
+            </div>
+                </div>
+            
+                <div class="container4">
+                    <div class="nutrition">
+                    <h3>NUTRITION PER SERVING</h3>
+                    <p>Serving Size 1/4 of the recipe (4 meatballs) / Calories 811 / Total Fat 32.7g / Saturated Fat 9.9g / Cholesterol 86mg / Sodium 927.1mg / Carbohydrate 85.2g / Dietary Fiber 9.5g / Protein 41.9g</p>
+            </div>
+                </div>
+
+                
+
+        <div class="container5">
+            <iframe 
+            width="410" 
+            height="250" 
+            src="https://www.youtube.com/embed/s_oG46LTyLI" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+            </iframe>
+
+            <div class="rating">
+                <h3><em>RATING</em></h3>
+                <p><span><strong><em>4.5</em></strong></span></p>
+                <span class="rating-stars">★★★★☆</span>
+            <div>
+            </div>               
+    
+
+        <section>
+            <video width="500" height="300" autoplay>
+                <source src="video/Perfect Spaghetti and Meatballs Recipe.mp4" type="video/mp4">
+                <p>Video by <a href="https://www.youtube.com/watch?v=s_oG46LTyLI">Inspired Taste</a></p>
+                
+            </video>
+        </section>    
+    </article>
+    <div class="pre">
+        <button class="previousP"><a href="blueberry_pancake.html">Previous</a></button>
+        <button class="previousP"><a href="shrimp_salad.html">Next</a></button>
+    </div>
+    <footer>
+        <table class="footer-div">
+            <tr>
+                <td class="connect"> <!--footer 1/3-->
+                    <a href="index.html"><img src="images/logo.png" alt="logo"></a> <!--logo-->
+                    
+                    <!--social media icons-->
+                    <div class="social-media-icons">
+                        <span class="dot">
+                            <a href="" target="_blank">
+                                <img src="images/Unrelated/instagram.jpg" alt="Instagram"></a></span>
+                        <span class="dot">
+                            <a href="" target="_blank">
+                                <img src="images/Unrelated/pinterest.jpg" alt="Pinterest"></a></span>
+                        <span class="dot">
+                            <a href="" target="_blank">
+                                <img src="images/Unrelated/facebook.jpg" alt="Facebook"></a></span>
+                        <span class="dot">
+                            <a href="" target="_blank">
+                                <img src="images/Unrelated/x.jpg" alt="X"></a></span>
+                    </div>
+
+                    <p><strong>connect with us!</strong></p>
+                </td> <!--footer 1/3-->
+
+                <td> <!--footer 2/3-->
+                    <div class="sub-nav"><!--sub nav menu-->
+                        <div class="sub-menu">
+                            <p><span class="small-caps">Navigation</span></p> <!--nav links-->
+                            <p>For you: </p>
+                            <ul>
+                                <li><a href="#" onclick="getRandomRecipe(event)">Recipes</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <!-- <li><a href="">Login / Register</a></li> -->
+                                <li><a href="feedback.html">Feedback</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="most-like"> <!--most liked page-->
+                            <p><span class="small-caps">Visitor's Favourite</span></p>
+                            <p>You might be interested: </p>
+                            <ul>
+                                <li><a href="meatball_spaghetti.html">Spaghetti and Meatballs</a></li>
+                                <li><a href="shrimp_salad.html">Shrimp Salad</a></li>
+                                <li><a href="poached_salmon.html">Poach Salmon</a></li>
+                                <li><a href="blueberry_pancake.html">Blueberry Pancakes</a></li>
+                            </ul>
+                        </div>
+                    </div> <!--sub-nav-->                
+                </td> <!--footer 2/3-->
+
+            </tr>
+        </table> <!--footer div-->
+        <address>&copy;<a href="about.html">Group 9</a> | <span class="update">Last updated: 20/11/2024 </span></address>
+    </footer>
+    <p><em>Disclaimer: This website is created for education and non-commercial use only. It is an assignment for completion of unit, DBI211 Fundamentals of Web Technology based on the Foundation (IT/Multimedia) course from Swinburne University of Technology Sarawak Campus.</em></p>
+</body>
+ </html>
+
+
+
+        

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>feedback form</title>
+        <script>
+            function validate(){
+                var x = document.forms["feedback"]["name"].value;
+                var y = document.forms["feedback"]["email"].value;
+                var filter = /^([a-z0-9_\.\-])+@(([a-z0-9\-])+\.)+([a-z0-9]{2,4})+$/;
+                if(x == ""){
+                    alert("Name must be filled out");
+                    return false;
+                }else if(y == ""){
+                    alert("Email must be filled out");
+                    return false;
+                }else if(!filter.test(y)){
+                    alert("Please enter a valid email");
+                }else{
+                    alert("Submit form successful!");
+                    window.location = "#";
+                } 
+            }
+        </script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="scripts.js" defer></script>
+    </head>
+    <body class="f_body">
+        <header>
+            <!--logo-->
+            <table class="header">
+            <tr> <!--logo-->
+                <td rowspan="2" class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></td>
+                    
+                <td class="h-mid-col"> <!--motto-->
+                    <div class="motto">Welcome to <strong>RAW Foodies</strong>! Ready to start your jorney of exploring delicious food?</div>
+                </td>
+
+                <td class="search-bar"> <!--search bar--> <!--stripped from Copilot-->
+                    <div class="search-container"> 
+                        <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">  <!--onkeyup event to trigger the search function-->
+                        <ul id="resultList"></ul> 
+                    </div>
+                </td> 
+            </tr>                         
+
+            <!--menu bar-->
+            <tr class="menu">
+                <td colspan="2" class="h-mid-col">
+                    <nav> 
+                        <ul class="navbar">
+                            <li class="dropdown"> <!--referenced from w3school-->
+                                <div class="drop-container">
+                                    <a href="#" class="dropbtn" onclick="getRandomRecipe(event)">Recipes</a>
+                                    <div class="dropdown-content"> <!--dropdown contents-->
+                                        <a href="meatball_spaghetti.html">Spaghetti and Meatballs</a>
+                                        <a href="shrimp_salad.html">Shrimp Salad</a> 
+                                        <a href="poached_salmon.html">Poach Salmon</a>
+                                        <a href="blueberry_pancake.html">Blueberry Pancakes</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="feedback.html">Feedback</a></li>
+                            <!-- <li><a href="">Login/Register</a></li> -->
+                        </ul>
+                    </nav>
+                </td>
+                <td></td>
+            </tr>
+            
+        </table>
+    
+    
+    
+            <!--breadcrumbs-->
+            <div class="breadcrumbs">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <!--sidebar, reference: w3school-->
+            <!-- <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
+                <!--javascript:void(0) is a trick to make sure that clicking the link doesn’t navigate anywhere-->
+                <!--javascript:void(0) expression is often used in web development to prevent an anchor tag (<a>) or a similar clickable element from performing its default action-->
+                <!-- <a><img></a> --> <!--user icon-->
+                <!-- <a href="#">Profile</a>
+                <a href="#">Account</a>
+                <a href="#">Activity</a>
+                <a href="#">History</a>
+                <a href="#"><br>Services</a> --> <!--href="#" creates a link that, when clicked, doesn't navigate to another page or section but instead scrolls to the top of the current page-->
+            <!--</div>
+            
+            <div id="main" class="sidebarbtn">
+                <button class="openbtn" onclick="openNav()">☰ User</button>  
+            </div> --> <!--sidebar interactive button -->
+        </header>
+        <article>
+            <div class="formbox">
+                <form name="feedback" action="mailto:104400633@students.swinburne.edu.my" method="post" enctype="text/plain">
+                    <fieldset>
+                        <legend>Feedback Form</legend>
+                    <table>
+                        <tr>
+                            <td>1.</td>
+                            <td>Date & Time</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="t"><input type="date" name="date" required="required"></td>
+                            <td class="t"><input type="time" name="name" required="required"></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>Name</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2"><input type="text" name="name" placeholder="Please enter your name" size="40" required="required"></td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>E-mail</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2"><input type="email" name="email" placeholder="Please enter your e-mail" size="40" required="required"></td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>Phone number</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2"><input type="phone" name="phoneNumber" placeholder="Please enter your phone number" size="40"></td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td>Rate your experience</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2">(1=strongly disagree, 2=disagree, 3=average, 4=agree, 5=strongly agree)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="r" colspan="2">
+                                <input type="radio" name="payment" id="1" value="1"><label for="1">1</label>
+                                <input type="radio" name="payment" id="2" value="2"><label for="2">2</label>
+                                <input type="radio" name="payment" id="3" value="3"><label for="3">3</label>
+                                <input type="radio" name="payment" id="4" value="4"><label for="4">4</label>
+                                <input type="radio" name="payment" id="5" value="5"><label for="5">5</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6.</td>
+                            <td>Rate for the content</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2">(1=strongly disagree, 2=disagree, 3=average, 4=agree, 5=strongly agree)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="r" colspan="2">
+                                <input type="radio" name="payment" id="1" value="1"><label for="1">1</label>
+                                <input type="radio" name="payment" id="2" value="2"><label for="2">2</label>
+                                <input type="radio" name="payment" id="3" value="3"><label for="3">3</label>
+                                <input type="radio" name="payment" id="4" value="4"><label for="4">4</label>
+                                <input type="radio" name="payment" id="5" value="5"><label for="5">5</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7.</td>
+                            <td>Rate for design</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2">(1=strongly disagree, 2=disagree, 3=average, 4=agree, 5=strongly agree)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="r" colspan="2">
+                                <input type="radio" name="payment" id="1" value="1"><label for="1">1</label>
+                                <input type="radio" name="payment" id="2" value="2"><label for="2">2</label>
+                                <input type="radio" name="payment" id="3" value="3"><label for="3">3</label>
+                                <input type="radio" name="payment" id="4" value="4"><label for="4">4</label>
+                                <input type="radio" name="payment" id="5" value="5"><label for="5">5</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8.</td>
+                            <td>Do you find it helpful?</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2">(1=strongly disagree, 2=disagree, 3=average, 4=agree, 5=strongly agree)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="r" colspan="2">
+                                <input type="radio" name="payment" id="1" value="1"><label for="1">1</label>
+                                <input type="radio" name="payment" id="2" value="2"><label for="2">2</label>
+                                <input type="radio" name="payment" id="3" value="3"><label for="3">3</label>
+                                <input type="radio" name="payment" id="4" value="4"><label for="4">4</label>
+                                <input type="radio" name="payment" id="5" value="5"><label for="5">5</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9.</td>
+                            <td>Please suitable selecct keywords for this website</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="c" colspan="2">
+                                <input type="checkbox" name="neat" value="neat"><label>Neat</label>
+                                <input type="checkbox" name="interesting" value="interesting"><label>Interesting</label>
+                                <input type="checkbox" name="playful" value="palyful"><label>Playful</label>
+                                <input type="checkbox" name="simple" value="simple"><label>Simple</label>
+                                <input type="checkbox" name="classic" value="classic"><label>Classic</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="c" colspan="2">
+                                <input type="checkbox" name="messy" value="messy"><label>Messy</label>
+                                <input type="checkbox" name="boring" value="boring"><label>Boring</label>
+                                <input type="checkbox" name="ordinary" value="ordinary"><label>Ordinary</label>
+                                <input type="checkbox" name="complex" value="complex"><label>Complex</label>
+                                <input type="checkbox" name="modern" value="modern"><label>Modern</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9.</td>
+                            <td>Feedback</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2"><textarea name="feedback" placeholder="Please enter your feedback" rows="3" cols="40"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>10.</td>
+                            <td>Other things</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2"><textarea name="other" placeholder="Please enter here" rows="3" cols="40"></textarea></td>
+                        </tr>
+
+                    </table>
+                        <p class="buttons">
+                            <input type="submit" value="Submit" onclick="validate()">
+                            <input type="reset" value="Reset">
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+            <button class="return_button" onclick="history.back()">Go Back</button>
+
+        </article>
+        <footer>
+            <table class="footer-div">
+                <tr>
+                    <td class="connect"> <!--footer 1/3-->
+                        <a href="index.html"><img src="images/logo.png" alt="logo"></a> <!--logo-->
+                        
+                        <!--social media icons-->
+                        <div class="social-media-icons">
+                            <span class="dot">
+                                <a href="" target="_blank">
+                                    <img src="images/Unrelated/instagram.jpg" alt="Instagram"></a></span>
+                            <span class="dot">
+                                <a href="" target="_blank">
+                                    <img src="images/Unrelated/pinterest.jpg" alt="Pinterest"></a></span>
+                            <span class="dot">
+                                <a href="" target="_blank">
+                                    <img src="images/Unrelated/facebook.jpg" alt="Facebook"></a></span>
+                            <span class="dot">
+                                <a href="" target="_blank">
+                                    <img src="images/Unrelated/x.jpg" alt="X"></a></span>
+                        </div>  
+    
+                        <p><strong>connect with us!</strong></p>
+                    </td> <!--footer 1/3-->
+    
+                    <td> <!--footer 2/3-->
+                        <div class="sub-nav"><!--sub nav menu-->
+                            <div class="sub-menu">
+                                <p><span class="small-caps">Navigation</span></p> <!--nav links-->
+                                <p>For you: </p>
+                                <ul>
+                                    <li><a href="#" onclick="getRandomRecipe(event)">Recipes</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <!-- <li><a href="">Login / Register</a></li> -->
+                                    <li><a href="feedback.html">Feedback</a></li>
+                                </ul>
+                            </div>
+    
+                            <div class="most-like"> <!--most liked page-->
+                                <p><span class="small-caps">Visitor's Favourite</span></p>
+                                <p>You might be interested: </p>
+                                <ul>
+                                    <li><a href="meatball_spaghetti.html">Spaghetti and Meatballs</a></li>
+                                    <li><a href="shrimp_salad.html">Shrimp Salad</a></li>
+                                    <li><a href="poached_salmon.html">Poach Salmon</a></li>
+                                    <li><a href="blueberry_pancake.html">Blueberry Pancakes</a></li>
+                                </ul>
+                            </div>
+                        </div> <!--sub-nav-->
+                    </td> <!--footer 2/3-->
+    
+                </tr>
+            </table> <!--footer div-->
+            <address>&copy;<a href="about.html">Group 9</a> | <span class="update">Last updated: 20/11/2024 </span></address>
+        </footer>
+        <p><em>Disclaimer: This website is created for education and non-commercial use only. It is an assignment for completion of unit, DBI211 Fundamentals of Web Technology based on the Foundation (IT/Multimedia) course from Swinburne University of Technology Sarawak Campus.</em></p>
+    </body>
+</html>

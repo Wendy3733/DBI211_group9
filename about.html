@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>profile page</title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="scripts.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <!--logo-->
+            <table class="header">
+                <tr> <!--logo-->
+                    <td rowspan="2" class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></td>
+                    <td class="h-mid-col"> <!--motto-->
+                        <div class="motto">Welcome to <strong>RAW Foodies</strong>! Ready to start your jorney of exploring delicious food?</div>
+                    </td>
+    
+                    <td class="search-bar"> <!--search bar--> <!--stripped from Copilot-->
+                        <div class="search-container"> 
+                            <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">  <!--onkeyup event to trigger the search function-->
+                            <ul id="resultList"></ul> 
+                        </div>
+                    </td> 
+                </tr>                         
+    
+                <!--menu bar-->
+                <tr class="menu">
+                    <td colspan="2" class="h-mid-col">
+                        <nav> 
+                            <ul class="navbar">
+                                <li class="dropdown"> <!--referenced from w3school-->
+                                    <div class="drop-container">
+                                        <a href="#" class="dropbtn" onclick="getRandomRecipe(event)">Recipes</a>
+                                        <div class="dropdown-content"> <!--dropdown contents-->
+                                            <a href="meatball_spaghetti.html">Spaghetti and Meatballs</a>
+                                            <a href="shrimp_salad.html">Shrimp Salad</a> 
+                                            <a href="poached_salmon.html">Poach Salmon</a>
+                                            <a href="blueberry_pancake.html">Blueberry Pancakes</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="feedback.html">Feedback</a></li>
+                                <!-- <li><a href="">Login/Register</a></li> -->
+                            </ul>
+                        </nav>
+                    </td>
+                    <td></td>
+                </tr>
+                
+            </table>
+    
+    
+    
+            <!--breadcrumbs-->
+            <div class="breadcrumbs">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Profile Page</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <!--sidebar, reference: w3school-->
+            <!-- <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
+                <!--javascript:void(0) is a trick to make sure that clicking the link doesn’t navigate anywhere-->
+                <!--javascript:void(0) expression is often used in web development to prevent an anchor tag (<a>) or a similar clickable element from performing its default action-->
+                <!-- <a><img></a> --> <!--user icon-->
+                <!-- <a href="#">Profile</a>
+                <a href="#">Account</a>
+                <a href="#">Activity</a>
+                <a href="#">History</a>
+                <a href="#"><br>Services</a> --> <!--href="#" creates a link that, when clicked, doesn't navigate to another page or section but instead scrolls to the top of the current page-->
+            <!--</div>
+            
+            <div id="main" class="sidebarbtn">
+                <button class="openbtn" onclick="openNav()">☰ User</button>  
+            </div> --> <!--sidebar interactive button -->
+        </header>
+        <article class="a_article">
+            <div class="container">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="profile wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: faeInUp;">
+                        <div class="Pic">
+                            <img src="images/annapic.jpeg" alt="anna_picture">
+                            <div class="socialMedia">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-envelope"></i></a><!--email-->
+                            </div>
+                        </div>
+                        <div class="d">
+                            <h4>Anna Wee Zia Chieng</h4>
+                            <p>104396457</p>
+                            <p>contribute</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="profile wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: faeInUp;">
+                        <div class="Pic">
+                            <img src="images/wendypic.jpeg" alt="wendy_picture">
+                            <div class="socialMedia">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="d">
+                            <h4>Chong Ming Feng</h4>
+                            <p>104400633</p>
+                            <p>contribute</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="profile wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: faeInUp;">
+                        <div class="Pic">
+                            <img src="images/richellepic.jpeg" alt="richelle_picture">
+                            <div class="socialMedia">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="d">
+                            <h4>Richelle Voon Qing Yi</h4>
+                            <p>104397023</p>
+                            <p>contribute</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </article>
+        <button class="return_button" onclick="history.back()">Go Back</button>
+        <footer>
+            <table class="footer-div">
+                <tr>
+                    <td class="connect"> <!--footer 1/3-->
+                        <a href="index.html"><img src="images/logo.png" alt="logo"></a> <!--logo-->
+                        
+                        <!--social media icons-->
+                        <div class="social-media-icons">
+                            <span class="dot">
+                                <a href="" target="_blank">
+                                    <img src="images/Unrelated/instagram.jpg" alt="Instagram"></a></span>
+                            <span class="dot">
+                                <a href="" target="_blank">
+                                    <img src="images/Unrelated/pinterest.jpg" alt="Pinterest"></a></span>
+                            <span class="dot">
+                                <a href="" target="_blank">
+                                    <img src="images/Unrelated/facebook.jpg" alt="Facebook"></a></span>
+                            <span class="dot">
+                                <a href="" target="_blank">
+                                    <img src="images/Unrelated/x.jpg" alt="X"></a></span>
+                        </div>  
+    
+                        <p><strong>connect with us!</strong></p>
+                    </td> <!--footer 1/3-->
+    
+                    <td> <!--footer 2/3-->
+                        <div class="sub-nav"><!--sub nav menu-->
+                            <div class="sub-menu">
+                                <p><span class="small-caps">Navigation</span></p> <!--nav links-->
+                                <p>For you: </p>
+                                <ul>
+                                    <li><a href="#" onclick="getRandomRecipe(event)">Recipes</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <!-- <li><a href="">Login / Register</a></li> -->
+                                    <li><a href="feedback.html">Feedback</a></li>
+                                </ul>
+                            </div>
+    
+                            <div class="most-like"> <!--most liked page-->
+                                <p><span class="small-caps">Visitor's Favourite</span></p>
+                                <p>You might be interested: </p>
+                                <ul>
+                                    <li><a href="meatball_spaghetti.html">Spaghetti and Meatballs</a></li>
+                                    <li><a href="shrimp_salad.html">Shrimp Salad</a></li>
+                                    <li><a href="poached_salmon.html">Poach Salmon</a></li>
+                                    <li><a href="blueberry_pancake.html">Blueberry Pancakes</a></li>
+                                </ul>
+                            </div>
+                        </div> <!--sub-nav-->
+                    </td> <!--footer 2/3-->
+    
+                </tr>
+            </table> <!--footer div-->
+            <address>&copy;<a href="about.html">Group 9</a> | <span class="update">Last updated: 20/11/2024 </span></address>
+        </footer>
+        <p><em>Disclaimer: This website is created for education and non-commercial use only. It is an assignment for completion of unit, DBI211 Fundamentals of Web Technology based on the Foundation (IT/Multimedia) course from Swinburne University of Technology Sarawak Campus.</em></p>
+    </body>
+</html>

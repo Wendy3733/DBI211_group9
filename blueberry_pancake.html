@@ -1,0 +1,260 @@
+<!--PANCAKES-->
+<!DOCTYPE html>
+<!-- Start of HTML -->
+<html lang="eng">
+    <!--Description : -->
+    <!--Author : AnnaWEE-->
+    <!--DATE :1 Nov 2024-->
+    <!--Validated : OK 1 Nov-->
+<head>
+    <title>Blueberry Pancakes</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Anna">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<!-- Start of Body -->
+<body>
+    <header>
+        <!--logo-->
+        <table class="header">
+            <tr> <!--logo-->
+                <td rowspan="2" class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></td>
+                    
+                <td class="h-mid-col"> <!--motto-->
+                    <div class="motto">Welcome to <strong>RAW Foodies</strong>! Ready to start your jorney of exploring delicious food?</div>
+                </td>
+
+                <td class="search-bar"> <!--search bar--> <!--referenced from Copilot-->
+                    <div class="search-container"> 
+                        <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">  <!--onkeyup event to trigger the search function-->
+                        <ul id="resultList"></ul> 
+                    </div>
+                </td> 
+            </tr>                         
+
+            <!--menu bar-->
+            <tr class="menu">
+                <td colspan="2" class="h-mid-col">
+                    <nav> 
+                        <ul class="navbar">
+                            <li class="dropdown"> <!--referenced from w3school-->
+                                <div class="drop-container">
+                                    <a href="#" class="dropbtn" onclick="getRandomRecipe(event)">Recipes</a>
+                                    <div class="dropdown-content"> <!--dropdown contents-->
+                                        <a href="meatball_spaghetti.html">Spaghetti and Meatballs</a>
+                                        <a href="shrimp_salad.html">Shrimp Salad</a> 
+                                        <a href="poached_salmon.html">Poach Salmon</a>
+                                        <a href="blueberry_pancake.html">Blueberry Pancakes</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="feedback.html">Feedback</a></li>
+                            <!-- <li><a href="">Login/Register</a></li> -->
+                        </ul>
+                    </nav>
+                </td>
+                <td></td>
+            </tr>
+            
+        </table>
+
+
+
+        <!--breadcrumbs-->
+        <div class="breadcrumbs">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blueberry_pancake.html">Blueberry Pancakes</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+<article>
+    <div class="container">
+
+    <!-- Recipe 1 -->
+    <div class="recipe-card">
+    <p class="recipe">
+
+        <figure class="s_figure">
+            <img class="s_img" src="images/pancakes.jpg" alt="Blueberry Pancakes">
+        </figure>
+            <div class="recipe-info">
+                <h1>BLUEBERRY PANCAKES </h1>
+                <p>Learn how to make the best blueberry pancakes with fresh or frozen blueberries! This easy recipe makes light, fluffy pancakes that are bursting with blueberries. You probably have everything you need in your kitchen right now.</p>
+                <h2>Key Ingredients</h2>
+                <ul class="ingredients">  
+                    <li>Blueberries: I happily use fresh or frozen blueberries for this recipe. When using frozen, I especially love the smaller wild blueberries.</li>
+                    <li>Flour: I've used all-purpose (plain) flour to make the pancakes in my photos. For more whole grains, you can use whole wheat flour. When I use whole wheat, I go for a 50:50 blend of whole wheat to all-purpose, so they stay nice and fluffy (I explain why in my recipe for whole wheat pancakes). For gluten-free pancakes, swap in your favorite gluten-free flour blend or try buckwheat flour (see my recipe for buckwheat pancakes).</li>
+                    <li>Sugar: I use granulated sugar, but brown sugar, coconut sugar, and honey work well. You could even mix in a little mashed banana as I did in my banana pancakes.</li>
+                    <li>Milk: I usually have whole milk in my fridge, so I use it for these blueberry pancakes. Non-dairy milk (like homemade oat milk) and even buttermilk work, too.</li>
+                    <li>Baking Soda and Lemon Juice: The reaction between baking soda and a little acid, like lemon juice or white vinegar, makes these pancakes so light and fluffy. If you only have baking powder in your kitchen, I've given directions below for substituting it in the recipe below. You can also use buttermilk as a substitute for the milk and then leave out the acid (lemon juice/vinegar), just like when making buttermilk pancakes.</li>
+                    <li>Butter: I add melted butter to the batter to get that melt-in-your-mouth texture. If you don't eat butter, you can use melted vegan butter or coconut oil, which does taste amazing with the blueberries.</li>
+                    <li>Egg: The egg adds structure and helps to make my pancakes light and fluffy. If you do not cook with eggs and want to make vegan blueberry pancakes, you can substitute a flax egg or leave it out.</li>
+                    <li>Vanilla and Salt: Vanilla extract and salt make these so delicious. You can experiment with other extracts, too. I particularly love a tiny splash of almond extract, which works so nicely in these blueberry pancakes.</li>
+
+                </ul>
+
+            <img class="s_img" src="images/panckes2.jpg" alt="Blueberry Pancakes">
+
+                    <h3>How to Make the Best Blueberry Pancakes</h3>
+                    <p>You will only need a few minutes to make these pancakes. First, sour some milk by adding lemon juice or vinegar to it. I usually don't have buttermilk on hand, so this is my cheat to get the texture of buttermilk pancakes without buttermilk.</p>
+                    <p>Next, whisk the dry ingredients and mix in the soured milk, egg, vanilla, and almond extract (optional but tasty). When you have a batter, fold in your blueberries.</p>
+        
+            <img class="s_img" src="images/pancake3.jpg" alt="Blueberry Pancakes">
+                    <p>You can make these pancakes with fresh or frozen blueberries. When using fresh blueberries, add them directly to the bowl with the batter and fold them in. For frozen blueberries, skip that and add the frozen berries directly to the uncooked side of the pancake in the pan. This way, the frozen berries sink into the middle of the pancake, and when you flip it, they get hot and juicy.</p>
+                    <p>(If you add frozen berries to the batter in the bowl and mix, the batter turns an unusual blue-green color. It tastes great, but adding the berries directly to the pancake makes them look better.)</p>
+                   
+            <img class="s_img" src="images/pancakes4.jpg" alt="Blueberry Pancakes">     
+                   
+                    <h3>You Will Need</h3>
+                    <li>1 ½ cups (190g) all-purpose flour</li>
+                    <li>1 to 2 tablespoons sugar, depending on preference</li>
+                    <li>3/4 teaspoon baking soda, see notes for substituting baking powder</li>
+                    <li>1/2 teaspoon of fine sea or table salt</li>
+                    <li>1 ¼ cups (295ml) milk, dairy and non-dairy both will work</li>
+                    <li>2 tablespoons white vinegar or fresh lemon juice</li>
+                    <li>1 large egg</li>
+                    <li>1 teaspoon vanilla extract</li>
+                    <li>1/8 teaspoon almond extract, optional</li>
+                    <li>4 tablespoons unsalted butter, melted, plus more for skillet</li>
+                    <li>1 cup blueberries, fresh or frozen, plus more for serving</li>
+
+            <h2 class="title">Directions</h2>
+                    <p><span class="number">1</span>In a 2-cup measuring jug or bowl, stir the milk and vinegar (or lemon juice) together, then set aside for five minutes. (This mixture mimics buttermilk, which, when mixed with the baking soda later in the recipe, makes extra fluffy blueberry pancakes.)</p>
+                    <p><span class="number">2</span>Meanwhile, whisk the flour, sugar, baking soda, and salt in a medium bowl.</p>
+                    <p><span class="number">3</span>Whisk the egg, vanilla, and almond extract into the milk.</p>
+                    <p><span class="number">4</span>Make a well in the center of the flour mixture. Pour the milk mixture and melted butter into the well and use a fork to stir until you no longer see clumps of flour. It is okay if the batter has a few small lumps(it is important not to over-mix the batter). The batter will be thick, but still pourable. If it seems too thick, add an extra splash of milk.</p>
+                    <p><span class="number">5</span>If using fresh blueberries, fold them in. (For frozen blueberries, keep them to the side, as you will add them later.)</p>
+                    <p><span class="number">6</span>Heat a large skillet (or use a griddle) over medium heat. The pan is ready if you splatter a little water onto the pan surface, and the water dances around the pan and eventually evaporates.</p>
+                    <p><span class="number">7</span>Lightly brush the skillet with melted butter. Use a 1/4 cup measuring cup to spoon batter onto the skillet. Gently spread the batter into a 4-inch circle. If you are using frozen blueberries, scatter a handful on top of the uncooked side of the pancake.</p>
+                    <p><span class="number">8</span>When the edges look dry, and bubbles start to appear and pop on the top surfaces of the pancake, turn it over. This takes about 2 minutes. Once flipped, cook another 1 to 2 minutes or until lightly browned and cooked in the middle.</p>
+                    <p><span class="number">9</span>Serve immediately with warm syrup, butter, and more berries.
+
+                    <h3>STORING</h3>
+                    <p><span class="number">1</span>Store blueberry pancakes in an airtight container in the fridge for up to a week or freeze them for up to 2 months. If freezing, line the pancakes on a baking sheet and freeze for about 30 minutes. Then, transfer them to a freezer-safe bag with parchment paper between each pancake to prevent sticking.</p>
+                    <p><span class="number">2</span>To reheat them, place them on a microwave-safe plate and cook for 20 seconds per pancake (add more time for multiple pancakes). Or wrap the pancakes in foil and bake at 350°F for about 10 minutes.</p>
+</div>
+    </div> 
+        </div>
+        <div class="container2">
+            <div class="author">
+                <figure class="s_figure">
+                    <img class="s_img" src="images/author1.jpg" alt="author">
+                    <h3>AUTHOR: Joanne Gallagher</h3>
+                </figure>
+        </div>
+            </div>
+
+            <div class="container3">
+                <div class="author-tips">
+                    <h3>Adam and Joanne's Tips</h3>
+                    <p><strong>Measuring flour:</strong> Fluff the flour in its container, then gently scoop it into your measuring cup until slightly mounded. Level off the top with a knife for accurate measuring. For even more accuracy, use a scale and measure the flour by weight (in grams).</p>
+                    <p><strong>Substitute for baking soda: </strong>To use baking powder instead of baking soda, leave out the vinegar or lemon juice called for in the recipe and use one tablespoon of baking powder, like we do for these fluffy pancakes.</p>
+                    <p><strong>Gluten-free blueberry pancakes:</strong> Use your favorite store-bought gluten-free flour blend. We are partial to Bob's Red Mill.</p>
+                    <p><strong>Vegan/egg-free pancakes:</strong> Replace the eggs with homemade flax eggs.</p>
+                    <p>The nutrition facts provided below are estimates.
+            </div>
+                </div>
+
+                <div class="container4">
+                    <div class="nutrition">
+                    <h3>NUTRITION PER SERVING</h3>
+                    <p>Serving Size 2 pancakes / Calories 393 / Total Fat 14.9g / Saturated Fat 8.7g / Cholesterol 84.7mg / Sodium 615.8mg / Total Carbohydrate 52.5g / Dietary Fiber 2.2g / Total Sugars 15.1g / Protein 12g</p>
+            </div>
+                </div>
+
+                <div class="container5">
+                    <iframe 
+                    width="410" 
+                    height="250" 
+                    src="https://www.youtube.com/embed/Sa0vl4sXCjA" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                    <div class="rating">
+                        <h3><em>RATING</em></h3>
+                        <p><span><strong><em>4.5</em></strong></span></p>
+                        <span class="rating-stars">★★★★☆</span>
+                </div>
+                    </div>         
+
+    <section>
+        <video width="500" height="300" autoplay>
+            <source src="video/Easy Blueberry Pancakes Recipe.mp4" type="video/mp4">
+            <p>Video by <a href="https://www.youtube.com/watch?v=Sa0vl4sXCjA">Inspired Taste</a></p>
+        </video>
+    </section>
+
+    </article>
+    <div class="pre">
+        <button class="previousP"><a href="poached_salmon.html">Previous</a></button>
+        <button class="previousP"><a href="meatball_spaghetti.html">Next</a></button>
+    </div>
+    <footer>
+        <table class="footer-div">
+            <tr>
+                <td class="connect"> <!--footer 1/3-->
+                    <a href="index.html"><img src="images/logo.png" alt="logo"></a> <!--logo-->
+                    
+                    <!--social media icons-->
+                    <div class="social-media-icons">
+                        <span class="dot">
+                            <a href="" target="_blank">
+                                <img src="images/Unrelated/instagram.jpg" alt="Instagram"></a></span>
+                        <span class="dot">
+                            <a href="" target="_blank">
+                                <img src="images/Unrelated/pinterest.jpg" alt="Pinterest"></a></span>
+                        <span class="dot">
+                            <a href="" target="_blank">
+                                <img src="images/Unrelated/facebook.jpg" alt="Facebook"></a></span>
+                        <span class="dot">
+                            <a href="" target="_blank">
+                                <img src="images/Unrelated/x.jpg" alt="X"></a></span>
+                    </div>
+
+                    <p><strong>connect with us!</strong></p>
+                </td> <!--footer 1/3-->
+
+                <td> <!--footer 2/3-->
+                    <div class="sub-nav"><!--sub nav menu-->
+                        <div class="sub-menu">
+                            <p><span class="small-caps">Navigation</span></p> <!--nav links-->
+                            <p>For you: </p>
+                            <ul>
+                                <li><a href="#" onclick="getRandomRecipe(event)">Recipes</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <!-- <li><a href="">Login / Register</a></li> -->
+                                <li><a href="feedback.html">Feedback</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="most-like"> <!--most liked page-->
+                            <p><span class="small-caps">Visitor's Favourite</span></p>
+                            <p>You might be interested: </p>
+                            <ul>
+                                <li><a href="meatball_spaghetti.html">Spaghetti and Meatballs</a></li>
+                                <li><a href="shrimp_salad.html">Shrimp Salad</a></li>
+                                <li><a href="poached_salmon.html">Poach Salmon</a></li>
+                                <li><a href="blueberry_pancake.html">Blueberry Pancakes</a></li>
+                            </ul>
+                        </div>
+                    </div> <!--sub-nav-->
+                </td> <!--footer 2/3-->
+
+            </tr>
+        </table> <!--footer div-->
+        <address>&copy;<a href="about.html">Group 9</a> | <span class="update">Last updated: 20/11/2024 </span></address>
+    </footer>
+    <p><em>Disclaimer: This website is created for education and non-commercial use only. It is an assignment for completion of unit, DBI211 Fundamentals of Web Technology based on the Foundation (IT/Multimedia) course from Swinburne University of Technology Sarawak Campus.</em></p>
+</body>
+</html>
+

@@ -1,0 +1,280 @@
+<!--SALAD-->
+<!DOCTYPE html>
+<!-- Start of HTML -->
+<html lang="eng">
+    <!--Description : -->
+    <!--Author : AnnaWEE-->
+    <!--DATE :1 Nov 2024-->
+    <!--Validated : OK 1 Nov-->
+<head>
+    <title>Shrimp Salad</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Anna">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!--logo-->
+        <table class="header">
+            <tr> <!--logo-->
+                <td rowspan="2" class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></td>
+                    
+                <td class="h-mid-col"> <!--motto-->
+                    <div class="motto">Welcome to <strong>RAW Foodies</strong>! Ready to start your jorney of exploring delicious food?</div>
+                </td>
+
+                <td class="search-bar"> <!--search bar--> <!--referenced from Copilot-->
+                    <div class="search-container"> 
+                        <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">  <!--onkeyup event to trigger the search function-->
+                        <ul id="resultList"></ul> 
+                    </div>
+                </td> 
+            </tr>                         
+
+            <!--menu bar-->
+            <tr class="menu">
+                <td colspan="2" class="h-mid-col">
+                    <nav> 
+                        <ul class="navbar">
+                            <li class="dropdown"> <!--referenced from w3school-->
+                                <div class="drop-container">
+                                    <a href="#" class="dropbtn" onclick="getRandomRecipe(event)">Recipes</a>
+                                    <div class="dropdown-content"> <!--dropdown contents-->
+                                        <a href="meatball_spaghetti.html">Spaghetti and Meatballs</a>
+                                        <a href="shrimp_salad.html">Shrimp Salad</a> 
+                                        <a href="poached_salmon.html">Poach Salmon</a>
+                                        <a href="blueberry_pancake.html">Blueberry Pancakes</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="feedback.html">Feedback</a></li>
+                            <!-- <li><a href="">Login/Register</a></li> -->
+                        </ul>
+                    </nav>
+                </td>
+                <td></td>
+            </tr>
+            
+        </table>
+
+
+
+        <!--breadcrumbs-->
+        <div class="breadcrumbs">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shrimp_salad.html">Shrimp Salad</a> </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <article>
+        <div class="container">
+
+        <!-- Recipe 1 -->
+        <div class="recipe-card">
+        <p class="recipe">
+
+            <figure class="s_figure">
+                <img class="s_img" src="images/salad.jpg" alt="Shrimp Salad ">
+            </figure>
+                <div class="recipe-info">
+                    <h1>SHRIMP SALAD</h1>
+                    <p>This is the best shrimp salad recipe we've made! It's also very simple to make. You can use pre-cooked shrimp from the store or cook it yourself. We highly recommend cooking the shrimp for the most flavorful and perfectly textured salad, which only takes a few minutes.</p>
+                    <h2>Key Ingredients:</h2>
+            <ul class="ingredients">
+                    <li>Shrimp: For the best shrimp salad, cook your shrimp. I poach shrimp for this salad and love how gently poaching keeps the shrimp succulent. I use large shrimp and have shown how to poach shrimp them below. (You can use pre-cooked shrimp, but cooking the shrimp yourself only takes a few minutes.)</li>
+                    <li>Bell pepper, celery, and green onion: Add flavor, color, and crunch. I especially love the added sweetness of the bell pepper in this salad.</li>
+                    <li>Mayonnaise: Is the base for our creamy shrimp salad dressing. Use a good-quality store-bought brand or make your own (here's our recipe for homemade mayo).</li>
+                    <li>Lemon juice: Keeps our salad fresh and cuts through any heaviness of the mayo.</li>
+                    <li>Dill: A classic herb with shrimp. I add a lot of dill to this salad and love it!</li>
+            </ul>
+
+            <img class="s_img" src="images/salad2.jpg" alt="Shrimp salad">
+
+                <h3>You Will Need</h3>
+                <h3>SHRIMP SALAD</h3>
+                    <li>1/2 cup finely diced red bell pepper (Half of a large pepper)</li>
+                    <li>1/2 cup finely diced celery (1 large stalk)</li>
+                    <li>1/2 cup thinly sliced green onion (3 to 4)</li>
+                    <li>1/2 cup (100 grams) mayonnaise, try homemade mayo</li>
+                    <li>2 tablespoons fresh lemon juice</li>
+                    <li>1/4 cup roughly chopped fresh dill</li>
+                    <li>1/4 teaspoon fine sea salt</li>
+                    <li>4 twists of pepper grinder</li>
+                <h3>POACHED SHRIMP</h3>
+                    <li>1 pound large shrimp (31-40 per pound), peeled and deveined</li>
+                    <li>2 quarts water</li>
+                    <li>1 lemon, cut in half</li>
+                    <li>2 cloves garlic, peeled and gently smashed</li>
+                    <li>1 bay leaf</li>
+                    <li>3 twists pepper grinder</li>
+                    <li>1 ½ tablespoon salt</li>
+                    <li>1/2 teaspoon Cajun seasoning, optiona</li>
+
+                <h3>How to Make Shrimp Salad</h3>
+                    <p>To poach the shrimp, I follow a similar process to poaching chicken. You’ll start by bringing water to a boil with a few aromatics (garlic, lemon, and salt).</p>
+  
+            <img class="s_img" src="images/salad3.jpg" alt="Shrimp salad">
+                    <p>When boiling, turn off the heat and add the shrimp. The hot water will poach large shrimp, like the shrimp shown in our photos, to perfection in approximately 3 minutes.</p>
+                    <p>Next, allow the poached shrimp to cool on a plate in the refrigerator while you gather the remaining salad ingredients (mayonnaise, lemon juice, drill, bell pepper, celery, green onion, salt, and pepper).</p>
+          
+            <img class="s_img" src="images/salad4.jpg" alt="Shrimp salad">
+
+                    <p>Gently mix all the shrimp salad ingredients, and you're done. If you are in a rush, enjoy the salad now but if you can wait an hour, the flavors will develop even more (I cover it and store in the fridge).</p>
+           
+            <img class="s_img" src="images/salad5.jpg" alt="Shrimp salad">
+            
+                <h2 class="title">Directions</h2>
+
+                    <h3>POACH THE SHRIMP</h3>
+                    <p><span class="number">1</span>Add 2 quarts of water to a large pot and place it on the stove over high heat. Squeeze a little lemon juice into the water and drop the lemon halves into the pot. Add the garlic, bay leaf, pepper, salt, and Cajun seasoning. Bring the liquid to a rolling boil.</p>
+                    <p><span class="number">2</span>Once the water reaches a rolling boil, remove the pot from the heat and immediately submerge the shrimp into the hot water. Poach them for three minutes.</p>
+                    <p><span class="number">3</span>Using tongs or a slotted spoon, carefully transfer the cooked shrimp to a plate. Allow them to cool by placing them in the refrigerator.</p>
+
+                    <h3>MAKE THE SALAD</h3>
+                    <p><span class="number">1</span>Once the shrimp have cooled, place them in a large bowl with the bell pepper, celery, green onion, mayonnaise, lemon juice, dill, salt, and pepper.</p>
+                    <p><span class="number">2</span>Gently mix the ingredients until they are well combined.</p>
+                    <p><span class="number">3</span>Allow the salad to sit in the refrigerator for at least one hour before serving, which allows the flavors to marinate and develop.</p>
+    </div>   
+        </div>
+            </div>
+
+     <div class="container2">
+        <div class="author">
+            <figure class="s_figure">
+                <img class="s_img" src="images/author1.jpg" alt="author">
+                <h3>AUTHOR: Joanne Gallagher</h3>
+            </figure>     
+    </div>
+
+        </div class="recipe-rights">
+        
+            <div class="container3">
+                <div class="author-tips">
+                    <h3>Adam and Joanne's Tips</h3>
+                    <p><strong>Storing:</strong>
+                    <p>Shrimp salad lasts up to 3 days in the refrigerator. Store it in an airtight container. I love having this salad ready in the fridge for an easy lunch or dinner! We do not recommend freezing shrimp salad.</p>
+                    <p><strong>Bell pepper substitute: </strong>
+                    <p>If you do not want to add bell peppers, leave them out.</p>
+                    <p>The nutrition facts provided below are estimates.</p>
+        
+            </div>
+                </div>
+
+                <div class="container4">
+                    <div class="nutrition">
+                        <h3>NUTRITION PER SERVING</h3>
+                        <p>Serving Size 1/4 of the recipe / Calories 319 / Total Fat 21.2g / Saturated Fat 3.3g / Cholesterol 225.8mg / Sodium 464.3mg / Carbohydrate 4.7g / Dietary Fiber 1.2g / Total Sugars 1.6g / Protein 28.4g</p>
+                </div>
+                    </div>
+
+            <div class="container5">
+                <iframe 
+                    width="410" 
+                    height="250" 
+                    src="https://www.youtube.com/embed/ofVVfanbW88" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                    <div class="rating">
+                        <h3><em>RATING</em></h3>
+                        <p><span><strong><em>4.5</em></strong></span></p>
+                        <span class="rating-stars">★★★★☆</span>
+            
+            </div>               
+                        
+
+                <section>
+                    <video width="500" height="300" autoplay>
+                        <source src="video/shrimp salad.mp4" type="video/mp4">
+                        <p>Video by <a href="https://www.youtube.com/watch?v=ofVVfanbW88">Allrecipes</a></p>
+                    </video>
+        
+                </section>
+        </div>
+        
+        </article>
+        <div class="pre">
+            <button class="previousP"><a href="meatball_spaghetti.html">Previous</a></button>
+            <button class="previousP"><a href="poached_salmon.html">Next</a></button>
+        </div>
+
+        <footer>
+            <table class="footer-div">
+                <tr>
+                    <td class="connect"> <!--footer 1/3-->
+                        <a href="index.html"><img src="images/logo.png" alt="logo"></a> <!--logo-->
+                        
+                        <!--social media icons-->
+                        <div class="social-media-icons">
+                            <span class="dot">
+                                <a href="" target="_blank">
+                                    <img src="images/Unrelated/instagram.jpg" alt="Instagram"></a></span>
+                            <span class="dot">
+                                <a href="" target="_blank">
+                                    <img src="images/Unrelated/pinterest.jpg" alt="Pinterest"></a></span>
+                            <span class="dot">
+                                <a href="" target="_blank">
+                                    <img src="images/Unrelated/facebook.jpg" alt="Facebook"></a></span>
+                            <span class="dot">
+                                <a href="" target="_blank">
+                                    <img src="images/Unrelated/x.jpg" alt="X"></a></span>
+                        </div>
+    
+                        <p><strong>connect with us!</strong></p>
+                    </td> <!--footer 1/3-->
+    
+                    <td> <!--footer 2/3-->
+                        <div class="sub-nav"><!--sub nav menu-->
+                            <div class="sub-menu">
+                                <p><span class="small-caps">Navigation</span></p> <!--nav links-->
+                                <p>For you: </p>
+                                <ul>
+                                    <li><a href="#" onclick="getRandomRecipe(event)">Recipes</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <!-- <li><a href="">Login / Register</a></li> -->
+                                    <li><a href="feedback.html">Feedback</a></li>
+                                </ul>
+                            </div>
+    
+                            <div class="most-like"> <!--most liked page-->
+                                <p><span class="small-caps">Visitor's Favourite</span></p>
+                                <p>You might be interested: </p>
+                                <ul>
+                                    <li><a href="meatball_spaghetti.html">Spaghetti and Meatballs</a></li>
+                                    <li><a href="shrimp_salad.html">Shrimp Salad</a></li>
+                                    <li><a href="poached_salmon.html">Poach Salmon</a></li>
+                                    <li><a href="blueberry_pancake.html">Blueberry Pancakes</a></li>
+                                </ul>
+                            </div>
+                        </div> <!--sub-nav-->
+                    </td> <!--footer 2/3-->
+    
+                </tr>
+            </table> <!--footer div-->
+            <address>&copy;<a href="about.html">Group 9</a> | <span class="update">Last updated: 20/11/2024 </span></address>
+        </footer>
+        <p><em>Disclaimer: This website is created for education and non-commercial use only. It is an assignment for completion of unit, DBI211 Fundamentals of Web Technology based on the Foundation (IT/Multimedia) course from Swinburne University of Technology Sarawak Campus.</em></p>
+    </body>
+</html>
+
+
+
+                
+
+
+                
+
+                        
+                        
+
